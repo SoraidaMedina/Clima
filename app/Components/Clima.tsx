@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, ActivityIndicator, StyleSheet } from 'react-native';
 import axios from 'axios';
-import WeatherCard from './WeatherCard'; // Componente personalizado
+import WeatherCard from './WeatherCard'; 
 
-// 🔑 API KEY y Configuración de Ciudad
-const API_KEY = 'a926c69d8166c83598a397b1560f6721'; // Reemplázalo con tu API Key de OpenWeatherMap
-const CITY = 'Huejutla de Reyes'; // Cambia la ciudad si deseas
+
+const API_KEY = 'a926c69d8166c83598a397b1560f6721'; 
+const CITY = 'Huejutla de Reyes'; 
 const API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${CITY}&units=metric&appid=${API_KEY}&lang=es`;
 
-// 📌 Interfaz para definir los datos del clima
+
 interface WeatherData {
   date: string;
   day: string;
